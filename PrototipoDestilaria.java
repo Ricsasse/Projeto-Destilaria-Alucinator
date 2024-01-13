@@ -15,7 +15,8 @@ public class PrototipoDestilaria {
         int qtdBombonas = teclado.nextInt();
         System.out.println("DIgite a quantidade de Alcool para cada receita:");
         double qtdAlcoolReceita = teclado.nextDouble();
-       
+
+        //Consideramos que cada bombona de alcool tenha 30L de aslcool
         double qtdAlcool = (qtdBombonas * 30) / qtdAlcoolReceita;
         
         System.out.println("Digite a quantidade de igredientes para a receita:");
@@ -26,7 +27,7 @@ public class PrototipoDestilaria {
         int i;
         double qtdBotReceita;
         
-
+    //Entrada das quantidade para cada receita
     for (i=0; i<qtdIgre; i++) {
       System.out.println("Informe o nome do botanico");
       vetor2[i] = teclado.next();
@@ -34,6 +35,7 @@ public class PrototipoDestilaria {
       qtdBotReceita = teclado.nextDouble();
       vetor[i] = qtdBotReceita * qtdAlcool;
     }
+        //Saida
     System.out.println("A quantidade de botanicos para: " + qtdBombonas + " Bombonas é de:");
     for (i=0; i<qtdIgre; i++) {
     System.out.println(vetor2[i] + ": " + vetor[i] + " Gramas");
